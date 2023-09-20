@@ -14,7 +14,7 @@ public class Controller {
 
     @RequestMapping("/ranjan")
     public  String MyNameRanjan(){
-        return "ranjan";
+        return "ranjan singh";
     }
 
     @RequestMapping("/ranjan2")
