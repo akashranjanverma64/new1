@@ -1,8 +1,4 @@
-FROM maven:3.8.2-jdk-11 AS build
-COPY . .
-RUN mvn clean package -DskipTests
-
-FROM openjdk:17-jdk-slim
-COPY --from=build /target/hum-0.0.1-SNAPSHOT.jar app.jar
+FROM openjdk:8
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ADD target/spring-boot-docker.jar spring-boot-docker.jar
+ENTRYPOINT ["java", "-jar", "/spring-boot-docker.jar"]
