@@ -1,9 +1,5 @@
-FROM ubuntu:latest AS build
-
-RUN apt-get update
-RUN apt-get install openjdk-17-jdk -y
+FROM maven:3.8.2-jdk-11 AS build
 COPY . .
-
 RUN mvn clean package -DskipTests
 
 FROM openjdk:17-jdk-slim
