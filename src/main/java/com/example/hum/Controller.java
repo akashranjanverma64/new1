@@ -14,11 +14,14 @@ public class Controller {
 
     @RequestMapping("/ranjan")
     public  String MyNameRanjan(){
-        return "ranjan";
+        return "ranjan bhai";
     }
 
     @RequestMapping("/ranjan2")
     public  String MyNameRanjan2(){
         return "ranjan2";
     }
+
+
+
 }
